@@ -1,8 +1,0 @@
-prefix=/home/jaemin/catkin_ws/devel
-
-Name: rov_rviz
-Description: Description of rov_rviz
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

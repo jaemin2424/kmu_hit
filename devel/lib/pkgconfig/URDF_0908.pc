@@ -1,8 +1,0 @@
-prefix=/home/jaemin/catkin_ws/devel
-
-Name: URDF_0908
-Description: Description of URDF_0908
-Version: 1.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

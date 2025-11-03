@@ -1,8 +1,0 @@
-prefix=/home/jaemin/catkin_ws/install
-
-Name: modudculab_ros
-Description: Description of modudculab_ros
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
