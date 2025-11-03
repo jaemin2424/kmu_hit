@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<robot name="rexrov2" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- 필요한 include -->
+  <xacro:include filename="$(find rexrov2_description)/urdf/rexrov2_base.xacro"/>
+  <xacro:include filename="$(find rexrov2_description)/urdf/rexrov2.gazebo.xacro"/>
+
+  <!-- 로봇 본체 -->
+  <xacro:rexrov2_base namespace="rexrov2"
+                      use_simplified_mesh="false"
+                      inertial_reference_frame="world">
+    <gazebo>
+      <!-- Gazebo 관련 plugin 태그 넣는 자리 -->
+      <!-- 예: thruster plugin, sensor plugin 등 -->
+    </gazebo>
+  </xacro:rexrov2_base>
+
+
+</robot>

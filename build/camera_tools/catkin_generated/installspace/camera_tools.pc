@@ -1,0 +1,8 @@
+prefix=/home/jaemin/catkin_ws/install
+
+Name: camera_tools
+Description: Description of camera_tools
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

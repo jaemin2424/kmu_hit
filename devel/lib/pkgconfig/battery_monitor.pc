@@ -1,0 +1,8 @@
+prefix=/home/jaemin/catkin_ws/devel
+
+Name: battery_monitor
+Description: Description of battery_monitor
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

@@ -1,0 +1,16 @@
+material Pool/FloorTile
+{
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture pool_tiles.png
+        filtering anisotropic
+        scale 5 5
+      }
+    }
+  }
+}
+

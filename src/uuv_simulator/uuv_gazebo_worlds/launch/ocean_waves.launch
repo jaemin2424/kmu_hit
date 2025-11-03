@@ -1,0 +1,62 @@
+<launch>
+    <arg name="gui" default="true"/>
+    <arg name="paused" default="false"/>
+    <arg name="set_timeout" default="false"/>
+    <arg name="timeout" default="0.0"/>
+
+    <!-- 기본 world 불러오기 -->
+    <include file="$(find gazebo_ros)/launch/empty_world.launch">
+        <arg name="world_name" value="worlds/ocean_waves.world"/>
+        <arg name="paused" value="$(arg paused)"/>
+        <arg name="use_sim_time" value="true"/>
+        <arg name="gui" value="$(arg gui)"/>
+        <arg name="headless" value="false"/>
+        <arg name="debug" value="false"/>
+        <arg name="verbose" value="true"/>
+    </include>
+
+    <include file="$(find uuv_assistants)/launch/publish_world_ned_frame.launch"/>
+    
+    <node name="publish_world_models"
+        pkg="uuv_assistants"
+        type="publish_world_models.py"
+        output="screen">
+        <rosparam subst_value="true">
+            meshes:
+                # 기존 모래 heightmap은 필요 없으면 주석 처리 가능
+                heightmap:
+                    mesh: package://uuv_gazebo_worlds/models/sand_heightmap/meshes/heightmap.dae
+                    model: sand_heightmap
+
+                # 바닥(수영장 바닥)
+                seafloor:
+                    plane: [10, 10, 0.1]       # 가로 10m, 세로 10m
+                    pose:
+                        position: [0, 0, -5]   # 깊이 5m 위치
+
+                # 벽 (수영장 네 면)
+                north:
+                    plane: [0.1, 10, 5]        # 두께 0.1, 길이 10m, 높이 5m
+                    pose:
+                        position: [5, 0, -2.5] # 동쪽 벽 중앙
+                south:
+                    plane: [0.1, 10, 5]
+                    pose:
+                        position: [-5, 0, -2.5]
+                west:
+                    plane: [10, 0.1, 5]
+                    pose:
+                        position: [0, -5, -2.5]
+                east:
+                    plane: [10, 0.1, 5]
+                    pose:
+                        position: [0, 5, -2.5]
+        </rosparam>
+    </node>
+
+    <group if="$(arg set_timeout)">
+        <include file="$(find uuv_assistants)/launch/set_simulation_timer.launch">
+            <arg name="timeout" value="$(arg timeout)"/>
+        </include>
+    </group>
+</launch>

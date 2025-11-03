@@ -1,0 +1,11 @@
+<launch>
+    <!-- 로봇의 URDF 파일을 로드 -->
+    <param name="robot_description" command="cat $(find rov_rviz)/urdf/rov.urdf"/>
+
+    <!-- Robot State Publisher 실행 -->
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
+
+    <!-- RViz 실행 -->
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find rov_rviz)/rviz/test_robot.rviz"/>
+</launch>
+

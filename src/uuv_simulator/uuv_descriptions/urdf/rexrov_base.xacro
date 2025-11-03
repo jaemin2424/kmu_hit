@@ -1,0 +1,48 @@
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="rexrov2" >
+  <xacro:include filename="$(find uuv_descriptions)/urdf/common.urdf.xacro"/>
+  <xacro:include filename="$(find uuv_sensor_ros_plugins)/urdf/sensor_snippets.xacro"/>
+  <xacro:include filename="$(find rexrov2_description)/urdf/rexrov2_snippets.xacro" />
+  <xacro:include filename="$(find uuv_gazebo_ros_plugins)/urdf/snippets.xacro"/>
+  
+  <!-- 새로운 본체 STL 파일 경로 -->
+  <xacro:property name="visual_mesh_file" value="package://urdf_0908/meshes/base_link.STL"/>
+  <xacro:property name="mass" value="1255.186927304"/>
+
+  <xacro:macro name="rexrov2_base"
+    params="namespace *gazebo use_simplified_mesh inertial_reference_frame">
+
+    <!-- base_link -->
+    <link name="${namespace}/base_link">
+      <inertial>
+        <origin xyz="-0.169235905 0.000054478 -0.223841103" rpy="0 0 0"/>
+        <mass value="${mass}"/>
+        <inertia ixx="102.335463312" ixy="0.001021623" ixz="-0.108658959"
+                 iyy="107.821828823" iyz="0.002788919" izz="135.325903731"/>
+      </inertial>
+
+      <!-- STL 기반 시각화 -->
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="${visual_mesh_file}" scale="5 5 5"/>
+        </geometry>
+      </visual>
+
+      <!-- STL 기반 충돌 모델 -->
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="${visual_mesh_file}" scale="5 5 5"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <!-- 여기에 gazebo 플러그인 블록 삽입 -->
+    <xacro:insert_block name="gazebo"/>
+
+    <!-- 센서 및 추진기 그대로 포함 -->
+    <xacro:include filename="$(find rexrov2_description)/urdf/rexrov2_sensors.xacro" />
+    <xacro:include filename="$(find rexrov2_description)/urdf/rexrov2_actuators.xacro" />
+
+  </xacro:macro>
+</robot>

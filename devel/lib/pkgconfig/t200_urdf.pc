@@ -1,0 +1,8 @@
+prefix=/home/jaemin/catkin_ws/devel
+
+Name: t200_urdf
+Description: Description of t200_urdf
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

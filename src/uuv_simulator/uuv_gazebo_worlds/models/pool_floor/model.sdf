@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="pool_floor">
+    <static>true</static>
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>50 50</size> <!-- 수영장 바닥 크기 -->
+          </plane>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>50 50</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://pool_floor/materials/scripts</uri>
+            <uri>model://pool_floor/materials/textures</uri>
+            <name>Pool/FloorTile</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>
+

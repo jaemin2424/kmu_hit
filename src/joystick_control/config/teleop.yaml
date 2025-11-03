@@ -1,0 +1,8 @@
+# teleop.yaml
+teleop:
+  axis_linear: 1   # 왼쪽 스틱 수직 방향
+  scale_linear: 1.0
+  axis_angular: 0  # 왼쪽 스틱 수평 방향
+  scale_angular: 1.0
+  enable_button: 4  # L1 버튼 누를 때만 활성화
+

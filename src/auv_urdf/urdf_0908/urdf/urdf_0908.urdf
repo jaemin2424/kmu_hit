@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="URDF_0908">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.0338471809621547 1.08956359407553E-05 -0.0447682206163218"
+        rpy="0 0 0" />
+      <mass
+        value="10.0414954184297" />
+      <inertia
+        ixx="0.0327473482597328"
+        ixy="3.26919299060839E-07"
+        ixz="-3.47708667491621E-05"
+        iyy="0.0345029852234732"
+        iyz="8.92454219458101E-07"
+        izz="0.0433042891939812" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_0908/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_0908/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="VER_LF">
+    <inertial>
+      <origin
+        xyz="-0.00588548815972781 4.71882158672998E-05 -0.000559729871466595"
+        rpy="0 0 0" />
+      <mass
+        value="0.195015921190247" />
+      <inertia
+        ixx="0.0001814536587282"
+        ixy="1.20083832934661E-07"
+        ixz="1.48309422904504E-07"
+        iyy="0.000131294195702462"
+        iyz="6.79420213774903E-08"
+        izz="0.000127260158633293" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_0908/meshes/VER_LF.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_0908/meshes/VER_LF.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="VER_LF_J"
+    type="fixed">
+    <origin
+      xyz="0.15622 0.23462 -0.088406"
+      rpy="1.5708 -1.5708 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="VER_LF" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="VER_LR">
+    <inertial>
+      <origin
+        xyz="-0.0058854881629061 4.718799040976E-05 -0.000559729860926166"
+        rpy="0 0 0" />
+      <mass
+        value="0.195015921156414" />
+      <inertia
+        ixx="0.000181453658635725"
+        ixy="1.20083947286343E-07"
+        ixz="1.48309420222817E-07"
+        iyy="0.000131294197094152"
+        iyz="6.79420333934886E-08"
+        izz="0.000127260160987324" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_0908/meshes/VER_LR.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_0908/meshes/VER_LR.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="VER_LR_J"
+    type="fixed">
+    <origin
+      xyz="-0.16378 0.23462 -0.088406"
+      rpy="1.5708 -1.5708 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="VER_LR" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="VER_RF">
+    <inertial>
+      <origin
+        xyz="-0.00588548820109924 4.71879776792195E-05 -0.000559729752399429"
+        rpy="0 0 0" />
+      <mass
+        value="0.195015920580232" />
+      <inertia
+        ixx="0.000181453659683781"
+        ixy="1.20085183581582E-07"
+        ixz="1.48309362370644E-07"
+        iyy="0.000131294200359028"
+        iyz="6.79421015952759E-08"
+        izz="0.00012726016494565" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_0908/meshes/VER_RF.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_0908/meshes/VER_RF.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="VER_RF_J"
+    type="fixed">
+    <origin
+      xyz="0.15622 -0.23438 -0.088406"
+      rpy="1.5708 -1.5708 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="VER_RF" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="VER_RR">
+    <inertial>
+      <origin
+        xyz="-0.00588548810322087 4.71879763254811E-05 -0.000559729765885586"
+        rpy="0 0 0" />
+      <mass
+        value="0.19501592208231" />
+      <inertia
+        ixx="0.000181453660772004"
+        ixy="1.20085319003833E-07"
+        ixz="1.48309361553594E-07"
+        iyy="0.000131294201233698"
+        iyz="6.79420292937088E-08"
+        izz="0.000127260164615212" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_0908/meshes/VER_RR.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_0908/meshes/VER_RR.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="VER_RR_J"
+    type="fixed">
+    <origin
+      xyz="-0.16378 -0.23438 -0.088406"
+      rpy="1.5708 -1.5708 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="VER_RR" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="YAW_LF">
+    <inertial>
+      <origin
+        xyz="0.00588539357718371 -6.17222627748715E-05 -0.000559713548565571"
+        rpy="0 0 0" />
+      <mass
+        value="0.195017170734942" />
+      <inertia
+        ixx="0.000181454231574194"
+        ixy="1.30666525332635E-07"
+        ixz="-1.48277927810402E-07"
+        iyy="0.000131293503928944"
+        iyz="-8.95579101240268E-08"
+        izz="0.000127259831688743" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_0908/meshes/YAW_LF.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_0908/meshes/YAW_LF.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="YAW_LF_J"
+    type="fixed">
+    <origin
+      xyz="0.090103 0.18291 0.02"
+      rpy="0 0 -0.74492" />
+    <parent
+      link="base_link" />
+    <child
+      link="YAW_LF" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="YAW_LR">
+    <inertial>
+      <origin
+        xyz="-0.00588539170902767 6.17183027318557E-05 -0.000559709882020823"
+        rpy="0 0 0" />
+      <mass
+        value="0.195017122079781" />
+      <inertia
+        ixx="0.000181454214669284"
+        ixy="1.30678876742209E-07"
+        ixz="1.48282983441707E-07"
+        iyy="0.000131293541053972"
+        iyz="8.95663409248251E-08"
+        izz="0.000127259776927908" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_0908/meshes/YAW_LR.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_0908/meshes/YAW_LR.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="YAW_LR_J"
+    type="fixed">
+    <origin
+      xyz="-0.090394 0.18327 0.02"
+      rpy="0 0 0.7854" />
+    <parent
+      link="base_link" />
+    <child
+      link="YAW_LR" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="YAW_RF">
+    <inertial>
+      <origin
+        xyz="0.00588539190860782 -6.17183478441863E-05 -0.000559709673956063"
+        rpy="0 0 0" />
+      <mass
+        value="0.195017120638189" />
+      <inertia
+        ixx="0.000181454214694502"
+        ixy="1.30677115666278E-07"
+        ixz="-1.48283104534802E-07"
+        iyy="0.000131293541995"
+        iyz="-8.95663348767343E-08"
+        izz="0.00012725977932334" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_0908/meshes/YAW_RF.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_0908/meshes/YAW_RF.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="YAW_RF_J"
+    type="fixed">
+    <origin
+      xyz="0.09026 -0.18351 0.02"
+      rpy="0 0 0.7854" />
+    <parent
+      link="base_link" />
+    <child
+      link="YAW_RF" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="YAW_RR">
+    <inertial>
+      <origin
+        xyz="-0.00588539576642472 6.17206802532855E-05 -0.000559708555579172"
+        rpy="0 0 0" />
+      <mass
+        value="0.195017098995782" />
+      <inertia
+        ixx="0.000181454209680615"
+        ixy="1.30670691079686E-07"
+        ixz="1.48280901032785E-07"
+        iyy="0.000131293534487429"
+        iyz="8.95684850929971E-08"
+        izz="0.000127259764092861" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_0908/meshes/YAW_RR.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_0908/meshes/YAW_RR.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="YAW_RR_J"
+    type="fixed">
+    <origin
+      xyz="-0.089839 -0.18288 0.02"
+      rpy="0 0 -0.78789" />
+    <parent
+      link="base_link" />
+    <child
+      link="YAW_RR" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>

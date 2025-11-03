@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<!-- Copyright (c) 2016 The UUV Simulator Authors.
+     All rights reserved.
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" >
+ 
+  <!-- Thruster 0 -->
+  <xacro:thruster_macro namespace="${namespace}" thruster_id="0"
+      mesh_filename="package://urdf_0908/meshes/t200_cw_prop_0.dae">
+    <origin xyz="${5*0.090103} ${5*0.18291} ${5*0.02}" rpy="0 0 -0.74492"/>
+  </xacro:thruster_macro>
+
+  <!-- Thruster 1 -->
+  <xacro:thruster_macro namespace="${namespace}" thruster_id="1"
+      mesh_filename="package://urdf_0908/meshes/t200_ccw_prop_1.dae">
+    <origin xyz="${5*0.09026} ${5*(-0.18351)} ${5*0.02}" rpy="0 0 0.7854"/>
+  </xacro:thruster_macro>
+
+  <!-- Thruster 2 -->
+  <xacro:thruster_macro namespace="${namespace}" thruster_id="2"
+      mesh_filename="package://urdf_0908/meshes/t200_cw_prop_2.dae">
+    <origin xyz="${5*(-0.090394)} ${5*0.18327} ${5*0.02}" rpy="0 0 0.7854"/>
+  </xacro:thruster_macro> 
+
+  <!-- Thruster 3 -->
+  <xacro:thruster_macro namespace="${namespace}" thruster_id="3"
+      mesh_filename="package://urdf_0908/meshes/t200_ccw_prop_3.dae">
+    <origin xyz="${5*(-0.089839)} ${5*(-0.18288)} ${5*0.02}" rpy="0 0 -0.78789"/>
+  </xacro:thruster_macro>
+
+  <!-- Thruster 4 -->
+  <xacro:thruster_macro namespace="${namespace}" thruster_id="4"
+      mesh_filename="package://urdf_0908/meshes/t200_ccw_prop_4.dae">
+    <origin xyz="${5*0.15622} ${5*0.23462} ${5*(-0.088406)}" rpy="1.5708 -1.5708 0"/>
+  </xacro:thruster_macro>
+
+  <!-- Thruster 5 -->
+  <xacro:thruster_macro namespace="${namespace}" thruster_id="5"
+      mesh_filename="package://urdf_0908/meshes/t200_cw_prop_5.dae">
+    <origin xyz="${5*0.15622} ${5*(-0.23438)} ${5*(-0.088406)}" rpy="1.5708 -1.5708 0"/>
+  </xacro:thruster_macro>
+
+  <!-- Thruster 6 -->
+  <xacro:thruster_macro namespace="${namespace}" thruster_id="6"
+      mesh_filename="package://urdf_0908/meshes/t200_cw_prop_6.dae">
+    <origin xyz="${5*(-0.16378)} ${5*0.23462} ${5*(-0.088406)}" rpy="1.5708 -1.5708 0"/>
+  </xacro:thruster_macro>
+
+  <!-- Thruster 7 -->
+  <xacro:thruster_macro namespace="${namespace}" thruster_id="7"
+      mesh_filename="package://urdf_0908/meshes/t200_ccw_prop_7.dae">
+    <origin xyz="${5*(-0.1637)} ${5*(-0.23438)} ${5*(-0.088406)}" rpy="1.5708 -1.5708 0"/>
+  </xacro:thruster_macro>
+</robot>

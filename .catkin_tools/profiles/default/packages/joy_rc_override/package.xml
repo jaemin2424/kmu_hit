@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>joy_rc_override</name>
+  <version>0.0.1</version>
+  <description>Joystick RC Override node</description>
+
+  <maintainer email="you@example.com">Your Name</maintainer>
+  <license>MIT</license>
+
+  <!-- 빌드/실행 시 필요한 의존성 -->
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <depend>rospy</depend>
+  <depend>sensor_msgs</depend>
+  <depend>mavros_msgs</depend>
+  <depend>std_msgs</depend>
+
+</package>
+
